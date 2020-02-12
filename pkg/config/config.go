@@ -269,6 +269,7 @@ type WSLSettings struct {
 	AllowCuddleDeclaration           bool `mapstructure:"allow-cuddle-declarations"`
 	AllowTrailingComment             bool `mapstructure:"allow-trailing-comment"`
 	CaseForceTrailingWhitespaceLimit int  `mapstructure:"force-case-trailing-whitespace:"`
+	MustCuddleErrCheckAndAssign      bool `mapstructure:"enforce-err-cuddling"`
 }
 
 //nolint:gomnd
@@ -307,6 +308,7 @@ var defaultLintersSettings = LintersSettings{
 		AllowCuddleDeclaration:           false,
 		AllowTrailingComment:             false,
 		CaseForceTrailingWhitespaceLimit: 0,
+		MustCuddleErrCheckAndAssign:      false,
 	},
 }
 
